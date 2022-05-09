@@ -9,14 +9,16 @@ body {
 }
 
 .app {
-  background-image: url('./Assets/cold-bg.jpeg');
+  /* background-image: url('./Assets/cold-bg.jpeg'); */
+  background-color: blue;
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease;
 }
 
 .app.warm {
-  background-image: url('./Assets/warm-bg.jpeg');
+  background-color: red;
+  /* background-image: url('./Assets/warm-bg.jpeg'); */
 }
 
 main {
@@ -63,16 +65,24 @@ main {
   text-align: center;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
-
-.location-box .date {
-  color: #FFF;
-  font-size: 20px;
-  font-weight: 300;
-  font-style: italic;
-  text-align: center;
-  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+.location-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
+.save{
+  background-color: #eaeaea; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 .weather-box {
   text-align: center;
 }
@@ -100,4 +110,40 @@ main {
   font-size: 48px;
   font-weight: 700;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.days{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 2vw;
+  border-radius: 3%;
+  margin: 1vw;
+}
+
+.savedlocations{
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+#saved{
+  font-size: 28px;
+  font-weight: 100;
+  margin: 1vw;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1vw;
 }
